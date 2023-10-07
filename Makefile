@@ -34,8 +34,8 @@ install-python: build-python
 	$(MAKE) -C $(PYTHON_LIB_DIR) install
 
 install: $(RGB_LIBRARY)
-	install 644 -Dv include/*.h -t $(PREFIX)/include
-	install 644 -Dv lib/lib$(RGB_LIBRARY_NAME)* -t $(PREFIX)/lib
+	install -m 644 -Dv include/*.h -t $(PREFIX)/include
+	install -m 644 -Dv lib/lib$(RGB_LIBRARY_NAME)* -t $(PREFIX)/lib
 
 FORCE:
 .PHONY: FORCE
